@@ -9,7 +9,7 @@ public class RotateCamera : MonoBehaviour
         float h = Input.GetAxis("Horizontal"); // touches/gauche droite
         if (Mathf.Abs(h) > 0.01f)
         {
-            transform.Rotate(0f, h * rotationSpeed * Time.deltaTime, 0f);
+            transform.Rotate(0f, h * -rotationSpeed * Time.deltaTime, 0f);
         }
     }
 }

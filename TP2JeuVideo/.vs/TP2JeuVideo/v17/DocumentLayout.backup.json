@@ -1,9 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2346784\\Documents\\TP2\\TP2JeuVideo\\",
+  "WorkspaceRootPath": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|c:\\users\\2346784\\documents\\tp2\\tp2jeuvideo\\assets\\rotatecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|c:\\users\\2346784\\documents\\tp2-v2\\tp2jeuvideo\\tp2jeuvideo\\assets\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|solutionrelative:assets\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|c:\\users\\2346784\\documents\\tp2-v2\\tp2jeuvideo\\tp2jeuvideo\\assets\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|solutionrelative:assets\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\assets\\rotatecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE9C8166-FAD7-0018-EDA9-87744BFF9D45}|Assembly-CSharp.csproj|solutionrelative:assets\\rotatecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,24 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RotateCamera.cs",
-              "DocumentMoniker": "C:\\Users\\2346784\\Documents\\TP2\\TP2JeuVideo\\Assets\\RotateCamera.cs",
-              "RelativeDocumentMoniker": "Assets\\RotateCamera.cs",
-              "ToolTip": "C:\\Users\\2346784\\Documents\\TP2\\TP2JeuVideo\\Assets\\RotateCamera.cs",
-              "RelativeToolTip": "Assets\\RotateCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "EnemyController.cs",
+              "DocumentMoniker": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\EnemyController.cs",
+              "RelativeDocumentMoniker": "Assets\\EnemyController.cs",
+              "ToolTip": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\EnemyController.cs",
+              "RelativeToolTip": "Assets\\EnemyController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T18:58:35.217Z",
+              "WhenOpened": "2025-10-03T16:17:15.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\PlayerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T19:05:02.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RotateCamera.cs",
+              "DocumentMoniker": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\RotateCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\RotateCamera.cs",
+              "ToolTip": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\RotateCamera.cs",
+              "RelativeToolTip": "Assets\\RotateCamera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T18:58:35.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LevelController.cs",
+              "DocumentMoniker": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\LevelController.cs",
+              "RelativeDocumentMoniker": "Assets\\LevelController.cs",
+              "ToolTip": "C:\\Users\\2346784\\Documents\\TP2-v2\\TP2JeuVideo\\TP2JeuVideo\\Assets\\LevelController.cs*",
+              "RelativeToolTip": "Assets\\LevelController.cs*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T16:35:29.914Z",
+              "EditorCaption": ""
             }
           ]
         }
