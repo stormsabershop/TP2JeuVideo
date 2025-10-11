@@ -2,54 +2,62 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-
-    private Rigidbody rb;
+    public Rigidbody rb;
     public Renderer rend;
-    private GameObject self;
-    private float baseForce = 0.5f;
+    //private GameObject self; // inutile
+    private float baseForce = 0.2f;
     private float difficulty = 1f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        if (rb == null) rb = GetComponentInChildren<Rigidbody>();
+
         rend = GetComponent<Renderer>();
-        self = GetComponent<GameObject>();
+        if (rend == null) rend = GetComponentInChildren<Renderer>();
+
+        if (rb == null) Debug.LogError("EnemyController: Rigidbody missing on enemy prefab!");
+        if (rend == null) Debug.LogWarning("EnemyController: Renderer missing on enemy prefab.");
     }
 
-
-    public void InitializeEnemy(float difficultyFactor, float size = 1f)
+    public void InitializeEnemy(float size = 1f)
     {
-        difficulty = difficultyFactor;
         transform.localScale = Vector3.one * size;
-        rb.mass = Mathf.Clamp(size * 1.0f, 0.1f, 20f);
-        if (rend != null) rend.material.SetFloat("_Difficulty", difficulty);
+
+        if (rb != null)
+        {
+            rb.mass = Mathf.Clamp(size * 1.0f, 0.1f, 20f);
+        }
     }
 
-    // Update is called once per frame
+
     void FixedUpdate()
     {
-        if (LevelController.instance != null && LevelController.instance.isGameOver) return;
+        if (LevelController.instance != null && LevelController.instance.gameOver) return;
         if (PlayerController.player == null) return;
+        if (rb == null) return;
+
+        
+        float playerScale = 1f;
+        if (PlayerController.player != null)
+            playerScale = PlayerController.player.transform.localScale.x;
+
+        // Exemple : si le joueur est 2x plus gros, l'ennemi devient 2x plus léger
+        // Clamp pour éviter des masses négatives ou ridicules
+        rb.mass = Mathf.Clamp(2f / playerScale, 0.2f, 2f);
+        // --- fin ajustement ---
 
         Vector3 dir = PlayerController.player.transform.position - transform.position;
         dir.y = 0f;
         dir.Normalize();
         rb.AddForce(dir * baseForce * difficulty, ForceMode.Force);
 
-        if(transform.position.y < -5f)
+        if (transform.position.y < -5f)
         {
-            Debug.Log("test12");
-            Destroy(self);
-            LevelController.instance.EnemyOutOfBound();
-        }
-    }
+            if (LevelController.instance != null)
+                LevelController.instance.EnemyOutOfBound();
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            var pc = collision.gameObject.GetComponent<PlayerController>();
-            if (pc != null) pc.HitEffect();
+            Destroy(gameObject);
         }
     }
 }

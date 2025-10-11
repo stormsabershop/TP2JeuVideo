@@ -2,14 +2,24 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour
 {
-    public float rotationSpeed = 90f; // deg/s
+    public float rotationSpeed = 100f; // deg/s
+    public bool autoRotate = false; // Add this line
 
     void Update()
     {
-        float h = Input.GetAxis("Horizontal"); // touches/gauche droite
-        if (Mathf.Abs(h) > 0.01f)
+        // If autoRotate is true, rotate the camera automatically
+        if (autoRotate)
         {
-            transform.Rotate(0f, h * -rotationSpeed * Time.deltaTime, 0f);
+            // The negative sign makes it rotate right. You can remove it to rotate left.
+            transform.Rotate(0f, -rotationSpeed * Time.deltaTime, 0f);
+        }
+        else // Otherwise, use player input
+        {
+            float h = Input.GetAxis("Horizontal"); // touches/gauche droite
+            if (Mathf.Abs(h) > 0.01f)
+            {
+                transform.Rotate(0f, h * -rotationSpeed * Time.deltaTime, 0f);
+            }
         }
     }
 }
